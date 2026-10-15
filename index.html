@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CV Muhammad Rauff Alfarizi - Siswa SMK jurusan Teknik Komputer dan Jaringan">
+  <title>CV | Muhammad Rauff Alfarizi</title>
+  <style>
+    :root {
+      --black: #111111;
+      --dark: #202020;
+      --white: #ffffff;
+      --muted: #666666;
+      --line: #dddddd;
+      --soft: #f4f4f4;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #e9e9e9;
+      color: var(--black);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .toolbar {
+      max-width: 980px;
+      margin: 22px auto 12px;
+      padding: 0 16px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .toolbar button {
+      border: 0;
+      border-radius: 8px;
+      padding: 11px 16px;
+      background: var(--black);
+      color: var(--white);
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .toolbar button.secondary {
+      background: var(--white);
+      color: var(--black);
+      border: 1px solid #cccccc;
+    }
+    .resume {
+      max-width: 980px;
+      min-height: 1120px;
+      margin: 0 auto 28px;
+      display: grid;
+      grid-template-columns: 34% 66%;
+      background: var(--white);
+      box-shadow: 0 16px 50px rgba(0,0,0,.14);
+    }
+    aside {
+      background: var(--black);
+      color: var(--white);
+      padding: 44px 30px;
+      display: flex;
+      flex-direction: column;
+    }
+    .monogram {
+      width: 142px;
+      height: 142px;
+      border: 3px solid white;
+      border-radius: 50%;
+      margin: 0 auto 42px;
+      display: grid;
+      place-items: center;
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      background: linear-gradient(145deg, #393939, #111111);
+    }
+    .side-section { margin-bottom: 34px; }
+    .side-section h2 {
+      font-size: 15px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #777;
+      margin: 0 0 15px;
+    }
+    .side-section p, .side-section li {
+      font-size: 14px;
+      overflow-wrap: anywhere;
+    }
+    .side-section p { margin: 8px 0 14px; }
+    .side-section ul { padding-left: 19px; margin: 0; }
+    .quote {
+      margin-top: auto;
+      border-top: 1px solid #777;
+      padding-top: 20px;
+      font-style: italic;
+      font-size: 14px;
+      color: #dddddd;
+    }
+    main { padding: 54px 48px 38px; }
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: clamp(32px, 4vw, 47px);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+      margin: 0;
+      overflow-wrap: anywhere;
+    }
+    .role {
+      margin: 14px 0 38px;
+      font-size: 15px;
+      letter-spacing: 2px;
+      color: var(--muted);
+    }
+    .section { margin: 0 0 36px; }
+    .section h2 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 17px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin: 0 0 18px;
+    }
+    .section h2::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: #bdbdbd;
+    }
+    .tag {
+      display: inline-block;
+      background: var(--black);
+      color: white;
+      padding: 8px 18px;
+      border-radius: 4px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .section p { margin: 0; font-size: 15px; }
+    .education {
+      border-left: 2px solid #222;
+      padding: 0 0 0 20px;
+      margin-left: 7px;
+      position: relative;
+    }
+    .education::before {
+      content: "";
+      position: absolute;
+      left: -6px;
+      top: 7px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #111;
+    }
+    .school { font-size: 18px; font-weight: 800; }
+    .subtle { color: var(--muted); font-size: 14px; }
+    .project-note {
+      background: var(--soft);
+      border-left: 3px solid var(--black);
+      padding: 14px 16px;
+      font-size: 14px;
+      color: #444;
+    }
+    footer {
+      margin-top: 54px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      font-size: 11px;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+    @media (max-width: 700px) {
+      .toolbar { margin-top: 12px; }
+      .resume { margin: 0 10px 20px; grid-template-columns: 1fr; min-height: auto; }
+      aside { padding: 30px 26px; }
+      .monogram { width: 110px; height: 110px; font-size: 34px; margin-bottom: 28px; }
+      .quote { margin-top: 0; }
+      main { padding: 34px 26px; }
+      h1 { font-size: 36px; }
+    }
+    @page { size: A4; margin: 0; }
+    @media print {
+      body { background: white; }
+      .toolbar { display: none; }
+      .resume {
+        width: 210mm;
+        max-width: none;
+        min-height: 297mm;
+        margin: 0;
+        box-shadow: none;
+        grid-template-columns: 34% 66%;
+      }
+      aside { padding: 35px 24px; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      main { padding: 42px 34px 28px; }
+      .monogram { width: 115px; height: 115px; font-size: 34px; margin-bottom: 32px; }
+      .side-section { margin-bottom: 25px; }
+      .side-section p, .side-section li { font-size: 12px; }
+      h1 { font-size: 35px; }
+      .role { margin-bottom: 28px; }
+      .section { margin-bottom: 27px; }
+      .section p { font-size: 13px; }
+      footer { margin-top: 35px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <button class="secondary" onclick="window.print()">Cetak / Simpan PDF</button>
+  </div>
+
+  <div class="resume">
+    <aside>
+      <div class="monogram" aria-label="Inisial MRA">MRA</div>
+
+      <section class="side-section">
+        <h2>Kontak</h2>
+        <p><strong>Email</strong><br><a href="mailto:minimalmandi97@gmail.com" style="color:inherit;text-decoration:none">minimalmandi97@gmail.com</a></p>
+        <p><strong>Domisili</strong><br>Bandung</p>
+      </section>
+
+      <section class="side-section">
+        <h2>Keahlian</h2>
+        <ul>
+          <li>Jaringan komputer</li>
+          <li>Ubuntu Server</li>
+        </ul>
+      </section>
+
+      <div class="quote">
+        “Terus belajar, berkembang, dan memberikan yang terbaik di setiap kesempatan.”
+      </div>
+    </aside>
+
+    <main>
+      <div class="eyebrow">Curriculum Vitae</div>
+      <h1>Muhammad Rauff Alfarizi</h1>
+      <div class="role">SISWA SMK · JURUSAN TKJ</div>
+
+      <section class="section">
+        <h2>Tujuan</h2>
+        <div class="tag">PKL / Magang</div>
+        <p>
+          Siswa SMK jurusan Teknik Komputer dan Jaringan (TKJ) yang tertarik pada
+          jaringan komputer dan sistem operasi Ubuntu Server. Ingin mengikuti
+          PKL atau magang untuk mengembangkan keterampilan, memperluas pengetahuan,
+          dan memperoleh pengalaman di dunia kerja.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Pendidikan</h2>
+        <div class="education">
+          <div class="school">SMK</div>
+          <div>XI TKJ 2</div>
+          <div class="subtle">Program Keahlian: Teknik Komputer dan Jaringan</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Pengalaman / Proyek</h2>
+        <div class="project-note">
+          Belum ada pengalaman atau proyek yang dicantumkan. Bagian ini dapat
+          diperbarui dengan proyek sekolah atau praktik yang benar-benar pernah dilakukan.
+        </div>
+      </section>
+
+      <footer>SIAP BELAJAR &nbsp; | &nbsp; SIAP BERKONTRIBUSI</footer>
+    </main>
+  </div>
+</body>
+</html>
